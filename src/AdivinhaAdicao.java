@@ -10,25 +10,44 @@ public class AdivinhaAdicao {
 
     public void iniciarAdicao() {
         // Configuração da janela
-        JFrame frame = new JFrame("Aprender adição");
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // fechar janela
-        frame.setSize(400, 300); // definir o tamanho da janela
-        frame.setLayout(new GridLayout(5, 1)); // layout de 5 linhas e 1 coluna
-        frame.setLocationRelativeTo(null);
+        JFrame frame = new JFrame("Aprender tabuada");
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Fechar janela
+        frame.setSize(400, 300); // Definir o tamanho da janela
+        frame.setLocationRelativeTo(null); // Centralizar a janela
+        frame.setLayout(null); // Usar layout null para controle manual dos componentes
+
+
+
+
+
 
         // Componentes da interface
         JLabel nivelLabel = new JLabel("Escolha o nível"); // texto para instruir o usuário sobre os níveis
         JTextField nivelFild = new JTextField(); // campo de texto para o usuário inserir o nível
-        JLabel perguntaLababel = new JLabel(""); // texto para exibir a pergunta
+        JLabel perguntaLabel = new JLabel(""); // texto para exibir a pergunta
         JTextField respostaField = new JTextField(); // campo para a resposta
         JButton confirmarButton = new JButton("Confirmar"); // botão para confirmar a resposta
+
+        nivelLabel.setBounds(100, 20, 200, 30); // Posição e tamanho do label
+        nivelFild.setBounds(100, 50, 150, 30); // Posição e tamanho do campo de texto
+        perguntaLabel.setBounds(100, 90, 200, 30); // Posição e tamanho da pergunta
+        respostaField.setBounds(100, 120, 150, 30); // Posição e tamanho do campo de resposta
+        confirmarButton.setBounds(150, 200, 100, 30); // Posição e tamanho do botão
+
 
         // Adiciona os componentes na interface
         frame.add(nivelLabel);
         frame.add(nivelFild);
-        frame.add(perguntaLababel);
+        frame.add(perguntaLabel);
         frame.add(respostaField);
         frame.add(confirmarButton);
+
+
+
+        // estilos
+
+        frame.getContentPane().setBackground(new Color(214, 186, 6)); // Definindo a cor azul clara
+        nivelLabel.setForeground(new Color(0x330B0B));
 
         // Torna a janela visível
         frame.setVisible(true);
@@ -51,7 +70,7 @@ public class AdivinhaAdicao {
             gerarPergunta();
 
             // Exibe a primeira pergunta
-            perguntaLababel.setText("Quanto é " + numero1 + " + " + numero2 + "?");
+            perguntaLabel.setText("Quanto é " + numero1 + " + " + numero2 + "?");
 
             // Adiciona a lógica para validar a resposta
             confirmarButton.addActionListener(ev -> {
@@ -65,7 +84,7 @@ public class AdivinhaAdicao {
 
                     // Gerar nova pergunta
                     gerarPergunta();
-                    perguntaLababel.setText("Quanto é " + numero1 + " + " + numero2 + "?");
+                    perguntaLabel.setText("Quanto é " + numero1 + " + " + numero2 + "?");
                     respostaField.setText(""); // limpa o campo de resposta
                 } catch (NumberFormatException ex) {
                     JOptionPane.showMessageDialog(frame, "Por favor, insira um número válido.");

@@ -11,7 +11,7 @@ public class Screen { // Define a classe Screen, que é responsável pela interf
         jFrame.setSize(400, 400); // Define o tamanho da janela (400px de largura por 400px de altura).
         jFrame.setTitle("JOGO DA TABUADA"); // Define o título da janela.
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Fecha o programa quando a janela for fechada.
-        jFrame.setResizable(false); // Impede que o usuário redimensione a janela.
+        jFrame.setResizable(true); // Impede que o usuário redimensione a janela.
         jFrame.setLocationRelativeTo(null); // Centraliza a janela na tela.
         jFrame.setLayout(null); // Define o layout da janela como nulo, permitindo o posicionamento manual dos componentes.
 
