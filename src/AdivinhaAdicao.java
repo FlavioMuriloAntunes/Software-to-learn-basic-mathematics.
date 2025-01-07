@@ -56,9 +56,9 @@ public class AdivinhaAdicao {
         confirmarButton.addActionListener(e -> {
             try {
                 // Obtém o nível inserido pelo usuário
-                nivel = Integer.parseInt(nivelFild.getText());
+                nivel = Integer.parseInt(nivelFild.getText()); // para usuario colocar o nivel
                 if (nivel < 1 || nivel > 3) {
-                    JOptionPane.showMessageDialog(frame, "Por favor, escolha um nível entre 1 e 3.");
+                    JOptionPane.showMessageDialog(frame, "Por favor, escolha um nível entre 1 e 3."); // caixa de menssagem para dialogo
                     return;
                 }
             } catch (NumberFormatException ex) {

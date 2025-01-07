@@ -9,7 +9,7 @@ public class Screen { // Define a classe Screen, que é responsável pela interf
         JFrame jFrame = new JFrame(); // Cria uma janela principal (JFrame).
         jFrame.setVisible(true); // Torna a janela visível ao usuário.
         jFrame.setSize(400, 400); // Define o tamanho da janela (400px de largura por 400px de altura).
-        jFrame.setTitle("JOGO DA TABUADA"); // Define o título da janela.
+        jFrame.setTitle("Matematica basica"); // Define o título da janela.
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Fecha o programa quando a janela for fechada.
         jFrame.setResizable(true); // Impede que o usuário redimensione a janela.
         jFrame.setLocationRelativeTo(null); // Centraliza a janela na tela.
