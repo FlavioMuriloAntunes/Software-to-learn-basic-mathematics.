@@ -25,9 +25,9 @@ public class AdivinhaTabuada {
 
         // Definir o tamanho e a posição dos componentes manualmente
         nivelLabel.setBounds(100, 20, 200, 30); // Posição e tamanho do label
-        nivelFild.setBounds(100, 50, 150, 30); // Posição e tamanho do campo de texto
+        nivelFild.setBounds(100, 50, 30, 30); // Posição e tamanho do campo de texto
         perguntaLabel.setBounds(100, 90, 200, 30); // Posição e tamanho da pergunta
-        respostaFild.setBounds(100, 120, 150, 30); // Posição e tamanho do campo de resposta
+        respostaFild.setBounds(100, 120, 30, 30); // Posição e tamanho do campo de resposta
         confirmarButton.setBounds(150, 200, 100, 30); // Posição e tamanho do botão
 
         // Adicionar os componentes ao frame

@@ -9,23 +9,37 @@ public class Screen { // Define a classe Screen, que é responsável pela interf
         JFrame jFrame = new JFrame(); // Cria uma janela principal (JFrame).
         jFrame.setVisible(true); // Torna a janela visível ao usuário.
         jFrame.setSize(400, 400); // Define o tamanho da janela (400px de largura por 400px de altura).
-        jFrame.setTitle("Matematica basica"); // Define o título da janela.
+        jFrame.setTitle("Matematica básica"); // Define o título da janela.
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Fecha o programa quando a janela for fechada.
         jFrame.setResizable(true); // Impede que o usuário redimensione a janela.
         jFrame.setLocationRelativeTo(null); // Centraliza a janela na tela.
         jFrame.setLayout(null); // Define o layout da janela como nulo, permitindo o posicionamento manual dos componentes.
 
         // Cria os botões que serão adicionados à janela.
-        JButton botao2 = new JButton("Adicao"); // Botão para iniciar a funcionalidade de "Adição".
+        JButton botao2 = new JButton("Adição"); // Botão para iniciar a funcionalidade de "Adição".
         JButton botao = new JButton("Tabuada"); // Botão para iniciar a funcionalidade de "Tabuada".
+        JButton botao3 = new JButton("Subtração");
+        JButton botao4 = new JButton("Divisão");
 
         // Adiciona os botões à janela para que sejam exibidos.
         jFrame.add(botao2);
         jFrame.add(botao);
+        jFrame.add(botao3);
+        jFrame.add(botao4);
 
         // Define a posição e o tamanho dos botões.
-        botao.setBounds(150, 100, 100, 30); // Define a posição (x=150, y=100) e o tamanho (largura=100, altura=30).
-        botao2.setBounds(150, 200, 100, 30); // Define a posição (x=150, y=200) e o tamanho (largura=100, altura=30).
+        botao.setBounds(50, 50, 100, 30); // Define a posição (x=150, y=100) e o tamanho (largura=100, altura=30).
+        botao2.setBounds(50, 100, 100, 30); // Define a posição (x=150, y=200) e o tamanho (largura=100, altura=30).
+        botao3.setBounds(50, 150 , 100 , 30);
+        botao4.setBounds(50, 200, 100 , 30 );
+
+
+        // adicionando estilos
+        jFrame.getContentPane().setBackground(new Color(168, 127, 20));
+
+
+
+
 
         // Adiciona um listener ao botão "Tabuada" para executar uma ação quando ele for clicado.
         botao.addActionListener(new ActionListener() {
